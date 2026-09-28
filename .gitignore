@@ -1,0 +1,33 @@
+# ---------------------------------------------------------------
+# Dependencias instaladas pelo npm (recriadas com "npm install")
+# ---------------------------------------------------------------
+node_modules/
+
+# ---------------------------------------------------------------
+# Dados de runtime / bancos SQLite gerados localmente
+# (as pastas continuam versionadas por causa dos .gitkeep)
+# ---------------------------------------------------------------
+data/*.sqlite
+data/*.db
+data/player-profiles.json
+api/*.sqlite
+api/*.db
+
+# ---------------------------------------------------------------
+# Modelos 3D (GLB/BIN) enviados pelo administrador
+# Sao binarios grandes; a pasta precisa existir no clone.
+# ---------------------------------------------------------------
+uploads/models/*
+!uploads/models/.gitkeep
+!uploads/models/.htaccess
+
+# ---------------------------------------------------------------
+# Logs, caches e arquivos locais
+# ---------------------------------------------------------------
+*.log
+.vite/
+.cache/
+.env
+Thumbs.db
+Desktop.ini
+.DS_Store

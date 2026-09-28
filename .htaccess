@@ -1,0 +1,14 @@
+Options -Indexes
+DirectoryIndex index.php index.html
+<FilesMatch "^(\.env|composer\.(json|lock))$">
+  Require all denied
+</FilesMatch>
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^assets/(.*)$ dist/assets/$1 [L]
+  RewriteRule ^audio/(.*)$ dist/audio/$1 [L]
+  RewriteRule ^api/?$ api/index.php [QSA,L]
+</IfModule>
+<FilesMatch "^(player-profiles\.json|.*\.(sqlite|db))$">
+  Require all denied
+</FilesMatch>
